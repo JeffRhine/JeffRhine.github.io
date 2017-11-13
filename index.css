@@ -1,9 +1,10 @@
 body {
-    background-color: #FFFFFF;
-    color: #373737;
+   
+    color: black;
     text-align: center;
     margin: 40px 150px 0;
     font-family: Verdana, Geneva, sans-serif;
+    background:url("https://avante.biz/wp-content/uploads/Creative-Backgrounds-Wallpapers/Creative-Backgrounds-Wallpapers-024.jpg");
 }
 
 header {
@@ -30,7 +31,7 @@ header div.image-holder {
     height: 50px;
 }
 img {
-    height: 200px;
+    height: 300px;
     border-radius: 50%;
 }
 
@@ -65,3 +66,11 @@ footer {
     font-family: 'Courier New', monospace;
     font-size: 2em;
     margin-bottom: 0;
+}
+.text {
+    text-indent: 50px;
+    text-align: justify;
+}
+.text2{
+    text-align: justify;
+}

@@ -1,64 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>CSS Template</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    background-color:black;
-}
-/* Style the header */
-.header {
-    background-color: #f1f1f1;
-    padding: 50px;
-    text-align: center;
-}
-img {
-    height: 250px;
-    width: 400px;
-    border-radius: 25%;
-    border-color: black;
-    border-width:25px;
-  
-}
-/* Container for flexboxes */
-.row {
-    display: -webkit-flex;
-    display: flex;
-}
-
-/* Create three equal columns that sits next to each other */
-.column {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
-}
-
-/* Style the footer */
-.footer {
-    background-color: #f1f1f1;
-    padding: 10px;
-    text-align: left;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 600px) {
-    .row {
-      -webkit-flex-direction: column;
-      flex-direction: column;
-    }
-}
-</style>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="index.css" type="text/css" />
+     <script src="jquery-3.1.0.js"></script> 
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script>
+     $(document).ready(function(){
+        $("p").hide();
+        
+        $("#btn1").click(function(){
+            $("#p1").toggle();
+       });
+    
+       $("#btn2").click(function(){
+            $("#p2").toggle();
+       });
+    
+       $("#btn3").click(function(){
+            $("#p3").toggle();
+        });
+        $("#btn4").click(function(){
+            $("#p4").toggle();
+        });
+     });
+     </script>
 </head>
-<body >
+<body class="body" >
 
 
 <div class="header">
@@ -68,49 +37,62 @@ img {
       
         
         
-        <img src="jeff (2).jpg" alt="Jeff's picture" style="width:304px;height:228px;">
-        
-     
-       
-  <p><strong> <a href="mailto:j.s.rhine@gmail.com">Gmail</a>  * <a href= "https://www.linkedin.com/in/jsrhine "> LinkedIn</a> </strong> </p>
-  <p>I have an analytical mind with a constant yearning to learn new things.  My natural curiosity and desire to invest in myself has led me to pursue a career in coding and I am looking to use my newly acquired skills to secure a role as a Java developer.</p>
-  
+        <img  class="img" src="jeff (2).jpg" alt="Jeff's picture" >
+        <div><strong> <a href="mailto:j.s.rhine@gmail.com">Gmail</a>  * <a href= "https://www.linkedin.com/in/jsrhine "> LinkedIn</a> </strong> </div>  
 </div>
+<div class="row"></div>
+<button id="btn1"><strong>About me</strong></button>
+   <div id="btn1" class="column button" color="black">
+    
+   
+    <p id="p1"class="text"><strong>I have an analytical mind with a constant yearning to learn new things. 
+         My natural curiosity and desire to invest in myself has led me to pursue a career in coding and I 
+         am looking to use my newly acquired skills to secure a role as a Java developer.</strong></p>
+  
+   </div>
+   <button id="btn2"><strong>Technical Skills</strong></button>
 
-<div class="row">
-  <div class="column" style="background-color:#aaa;">
-      <p><strong>Technical Skills</strong></p>
-    <p>Object Oriented Programming:  Java</p>
-            <p>  -Web Application Development: HTML, CSS, Javascript, jQuery, Servlets, JSP, Spring Web MVC, Tomcat</p>
-            <p> -Database Programming: JDBC, table design and creation, SQL queries and DML, PostgreSQL, E/R diagrams</p>
-            <p> -Development tools and techniques: Agile, unit testing (JUnit), integration testing, TDD, unix command line navigation, Git, Eclipse, Selenium, Cucumber</p>
+  <div id="btn2" class="column button">
+     
+    <p id="p2"class="text2"><strong>
+             -Object Oriented Programming:  Java</br>
+             -Web Application Development: HTML, CSS, Javascript, jQuery, Servlets, JSP, Spring Web MVC, Tomcat</br>
+             -Database Programming: JDBC, table design and creation, SQL queries and DML, PostgreSQL, E/R diagrams</br>
+             -Development tools and techniques: Agile, unit testing, integration testing, TDD, unix command line navigation, Git, Eclipse</strong></p>
     </div>
-
-  <div class="column" style="background-color:#bbb;">
-      <p><strong>Education</strong></p>
-    <p> Tech Elevator -Cleveland, Ohio						         August 2017 to Present</p>
-            <p>   -14-week Java coding bootcamp learning how to develop dynamic web based software systems using the Java programming language and platform.</p>
-            
-                    <p>    North Central State College-Mansfield, Ohio                                                                        March  2006  </p>     
-                            <p>       -Associates of Applied Science with a Major in Electronic Engineering</p>
+    <button id="btn3"><strong>Education</strong></button>
+  <div id="btn3"class="column button">
+     
+    <p id="p3" class="text"><strong>
+        I have an Associates of Applied Science with a Major in Electronic Engineering from North Central State College in Mansfield, Ohio.
+        Most recently, I have studied Java Web Development at Tech Elevator, located in Cleveland, Ohio. Tech Elevator is a 14-week coding bootcamp learning how to develop dynamic web 
+        based software systems using the Java programming language and platform.    
+                                  </strong></p>
         </div>
 
  
       
  
 </div>
+<button id="btn4"><strong>Employment</strong></button> 
+<div id="btn4" class="footer button">
+    
 
-<div class="footer" style="background-color:#ccc;">
-        <p><strong>Employment</strong></p>
-
-  <p>Tremco Inc.- Ashland, Ohio                                                                                     May 1998 – May 2017</p>
-  
-<p>-Performed several different roles including Quality Technician, Design Engineer, Shift Coordinator and           Production Associate.   </p> 
-<p> -Duties included finished goods testing, record keeping, data analysis, new product design, inventory  control, leading team meetings, training new employees. </p> 
-  <p>-Familiar with LEAN manufacturing techniques such as 5S, Kanban, Kata, and PDCA </p>
+  <p id="p4" class="text"><strong>
+        I was employed by Tremco, Inc. from May, 1998 until May, 2017. I began my career at Tremco as a temp on a two week assignment and ended up staying almost two decades. 
+         I was hired on as a Production Associate to operate a rubber extrusion line. After a few years, I decided to further my education and obtained a degree in electrical engineering
+         while still working 50-60 hours a week. Once I finished my degree, I combined my new education with my existing skills and took a position as a Design Engineer.
+         In this new role I worked with customers to design new products and approve them for production.  After a companywide downsizing, my position was eliminated but my skills
+         were still valued by the company and I was reassigned. I next took on the role of Shift Coordinator, where I was resposible 
+         for moving raw materials into place and removing finished goods from the end of the extrusion lines and into the warehouse. A large amount of paperwork was required as part 
+         of this position, as every pound of raw material had to be tracked and converted into feet of finished goods.  My next challenge was to become the Quality Technician for a new
+         product line.  We built a whole new process, from the ground up, using LEAN manufacturing techniques such as 5S, Kata, PDCA, and Kanban.
+                    </strong>   
+                </p>
 </div>
 </div>
+<script src="script.js"></script>
 </body>
-
+</html>
 
 
